@@ -12,7 +12,7 @@ def health():
 
 @app.route("/echo/")
 @app.route("/echo/<text>")
-def echo(text = "Customize essa mensagem adicionando texto apos /echo/seu texto aqui"):
+def echo(text = "Customize essa mensagem adicionando texto apos /echo/seutextoaqui"):
     return (jsonify(echo=text))
 
 @app.errorhandler(404)
