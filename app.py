@@ -10,8 +10,9 @@ def home():
 def health():
     return(jsonify(status = "ok", service = "sinapse", version = "1.0.0"))
 
+@app.route("/echo/")
 @app.route("/echo/<text>")
-def echo(text):
+def echo(text = "Customize essa mensagem adicionando texto apos /echo/seu texto aqui"):
     return (jsonify(echo=text))
 
 @app.errorhandler(404)
